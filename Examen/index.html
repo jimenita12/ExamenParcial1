@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital el Faro del Mayab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Hospital el Faro del Mayab</h1>
+    <h2>Registro de pacientes</h2>
+
+    <div id="paciente-form">
+        <h2>Registrar nuevo paciente</h2>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="edad" placeholder="Edad">
+        <input type="text" id="genero" placeholder="Género">
+        <input type="text" id="telefono" placeholder="Número telefónico">
+        <input type="text" id="diagnostico" placeholder="Diagnostico Médico"><br>
+        <button onclick="agregarPaciente()">Agregar paciente</button>
+    </div>
+
+    <div id="busqueda-form">
+        <h2>Buscar Paciente</h2>
+        <div>
+            <input type="text" id="buscar-nombre" placeholder="Buscar por nombre">
+            <button onclick="buscarPaciente('nombre')">Buscar por Nombre</button>
+        </div>
+        <div>
+            <input type="text" id="buscar-diagnostico" placeholder="Buscar por diagnóstico">
+            <button onclick="buscarPaciente('diagnostico')">Buscar por Diagnostico</button>
+        </div>
+    </div>
+
+    <div id="pacientes-lista">
+        <h2>Lista de pacientes</h2>
+        <ul id="lista">
+        </ul>
+    </div>
+
+    <div id="resultados-busqueda">
+        <h2>Resultados de búsqueda</h2>
+        <ul id="lista-pacientes-encontrados">
+        </ul>
+    </div>
+
+    <div id="estadisticas">
+        <h2>Estadísticas</h2>
+        <p id="info-total-pacientes">Total de pacientes: <span id="total-pacientes">0</span></p>
+        <p id="info-promedio">Edad promedio: <span id="edad-promedio">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
